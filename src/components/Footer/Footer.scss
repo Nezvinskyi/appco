@@ -9,6 +9,7 @@
 }
 
 .secondary-footer {
+  display: flex;
   padding-top: 15px;
   background-color: #1c3b55;
 }
@@ -16,7 +17,7 @@
 .footer {
   &-wrapper {
     display: flex;
-    width: 1000px;
+    width: 1180px;
     color: $white;
     align-items: center;
     justify-content: space-between;
