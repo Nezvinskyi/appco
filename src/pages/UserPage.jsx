@@ -28,16 +28,18 @@ const UserPage = () => {
   });
 
   return (
-    <Container>
-      <Navigation />
-      <h1 style={{ marginTop: '25px', marginBottom: '15px' }}>
-        {first_name} {last_name}
-      </h1>
-      <Chart title="Views" data={userViews} dataKey="page_views" />
+    <>
+      <Container>
+        <Navigation />
+        <h1 style={{ marginTop: '25px', marginBottom: '15px' }}>
+          {first_name} {last_name}
+        </h1>
+        <Chart title="Views" data={userViews} dataKey="page_views" />
 
-      <Chart title="Clicks" data={userClicks} dataKey="clicks" />
+        <Chart title="Clicks" data={userClicks} dataKey="clicks" />
+      </Container>
       <Footer />
-    </Container>
+    </>
   );
 };
 
