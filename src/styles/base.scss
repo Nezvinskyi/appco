@@ -1,0 +1,60 @@
+@import './shared';
+
+body {
+  margin: 0;
+  background-color: $white;
+  color: $black;
+  font-family: $primary-font-stack;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+.NavLink--active {
+  color: cadetblue;
+}
+
+.HomeView {
+  min-height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HomeView-title {
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+}
+
+// form {
+//   width: 320px;
+// }
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}

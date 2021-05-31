@@ -1,0 +1,133 @@
+@import '../../styles/shared.scss';
+
+.hero {
+  display: flex;
+
+  &-wrapper {
+    // background-position: top;
+    background-image: url('../../images/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -35px;
+  }
+
+  &-wrapper-left {
+    width: 50%;
+  }
+  &-title {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 48px;
+    color: $white;
+  }
+  &-description {
+    margin-top: 25px;
+    color: $white;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  &-btn {
+    margin-top: 30px;
+    width: 155px;
+    height: 55px;
+    border-radius: 8px;
+    color: $accent;
+    font-size: 16px;
+    // border: none;
+    cursor: pointer;
+  }
+
+  &-wrapper-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+}
+
+// .iphone {
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 280px;
+//   height: 560px;
+//   background-image: url(../../images/iphone.png);
+
+//   &-screen {
+//     margin-top: 15px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     width: 244px;
+//     height: 526px;
+//     background-color: red;
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     background-position: center;
+//     mask-image: url('../../images/iphone-mask.svg');
+//     mask-repeat: no-repeat;
+//     mask-position: center;
+//     // mask-size: 100%;
+//   }
+// }
+
+.offer {
+  &-title {
+    font-size: 32px;
+    font-weight: 400;
+    color: $black;
+    text-align: center;
+    line-height: 39px;
+  }
+
+  &-description {
+    margin-top: 24px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.42;
+    color: $grey;
+  }
+}
+
+.features {
+  padding-bottom: 128px;
+
+  &-list {
+    display: flex;
+    justify-content: center;
+    margin: 40px -10px 0;
+
+    &-item {
+      width: 380px;
+      margin: 10px;
+      padding: 0px 32px 48px;
+      border-radius: 16px;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
+
+      &::before {
+        display: block;
+        content: '';
+        height: 180px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+  &-title {
+    color: $black;
+    text-align: center;
+  }
+  &-description {
+    margin-top: 15px;
+    text-align: center;
+    color: $grey;
+  }
+}
+
+.icon-design::before {
+  background-image: url('../../images/icon-design.svg');
+}
+.icon-secure::before {
+  background-image: url('../../images/icon-secure.svg');
+}
+.icon-retina::before {
+  background-image: url('../../images/icon-retina.svg');
+}
