@@ -53,6 +53,7 @@ class UsersList extends Component {
   state = { page: 0, rowsPerPage: 10 };
 
   componentDidMount() {
+    this.props.changeCurrentUser({});
     this.props.fetchUsers();
   }
 
