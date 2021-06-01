@@ -1,32 +1,33 @@
 import { Breadcrumbs } from '@material-ui/core';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import { NavLink, useLocation } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import * as selectors from '../../redux/selectors';
 import './Navigation.scss';
 
-const Navigation = () => {
-  const location = useLocation();
-  const id = location?.state?.id;
-  const first_name = location?.state?.first_name;
-  const last_name = location?.state?.last_name;
-
-  return (
-    <Breadcrumbs
-      style={{ paddingTop: '15px' }}
-      separator={<NavigateNextIcon fontSize="small" />}
-    >
-      <NavLink className="link" activeClassName="link-active" exact to="/">
-        Main page
+const Navigation = ({ id, first_name, last_name }) => (
+  <Breadcrumbs
+    style={{ paddingTop: '15px' }}
+    separator={<NavigateNextIcon fontSize="small" />}
+  >
+    <NavLink className="link" activeClassName="link-active" exact to="/">
+      Main page
+    </NavLink>
+    <NavLink className="link" activeClassName="link-active" to="/users-list">
+      User statistics
+    </NavLink>
+    {id && (
+      <NavLink className="link" activeClassName="link-active" to="/user-page">
+        {`${first_name} ${last_name}`}
       </NavLink>
-      <NavLink className="link" activeClassName="link-active" to="/users-list">
-        User statistics
-      </NavLink>
-      {id && (
-        <NavLink className="link" activeClassName="link-active" to="/user-page">
-          {`${first_name} ${last_name}`}
-        </NavLink>
-      )}
-    </Breadcrumbs>
-  );
-};
+    )}
+  </Breadcrumbs>
+);
 
-export default Navigation;
+const mapStateToProps = state => ({
+  id: selectors.getCurrentUserId(state),
+  first_name: selectors.getCurrentUserFirstName(state),
+  last_name: selectors.getCurrentUserLastName(state),
+});
+
+export default connect(mapStateToProps)(Navigation);

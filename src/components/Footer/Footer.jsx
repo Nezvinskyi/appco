@@ -11,8 +11,7 @@ const Footer = () => {
             <p>AppCo</p>
           </Link>
           <p>All rights reserved by ThemeTags</p>
-
-          <p>Copyrights © 2019. </p>
+          <p>Copyrights © 2019 </p>
         </div>
       </Container>
     </footer>
